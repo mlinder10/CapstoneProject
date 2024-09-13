@@ -1,6 +1,7 @@
 import base64
 from flask import request
 from flask_restful import Resource
+from DECIMER import predict_SMILES
 
 
 class DrawingRoute(Resource):
@@ -10,7 +11,7 @@ class DrawingRoute(Resource):
         save_base64_image(data, path)
         smiles = 'undefined'
         try:
-            smiles = predict_SMILES(path)
+            smiles = predict_SMILES(path, hand_drawin=True)
         except:
             smiles = 'error'
         return smiles

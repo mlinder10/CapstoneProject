@@ -20,9 +20,9 @@ export default function FillBlankQuestionEditor({
   handleSave,
   handleDiscard,
 }: FillBlankQuestionEditorProps) {
-  function updatePrompt(text: string) {
-    handleChange({ ...question, prompt: text });
-  }
+  // function updatePrompt(text: string) {
+  //   handleChange({ ...question, prompt: text });
+  // }
 
   function addBlank() {
     handleChange({ ...question, choices: [...question.choices, ""] });
@@ -39,13 +39,13 @@ export default function FillBlankQuestionEditor({
                 key={index}
                 type="text"
                 value={choice}
-                onChange={(e) => {}}
+                // onChange={(e) => {}}
               />
               <input
                 key={index + 100}
                 type="text"
                 value={question.prompt}
-                onChange={(e) => {}}
+                // onChange={(e) => {}}
               />
             </>
           ))}

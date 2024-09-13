@@ -11,7 +11,7 @@ import SwiftUI
 struct chemcodeApp: App {
   var body: some Scene {
     WindowGroup {
-      DrawingView()
+      ClassroomsView()
     }
   }
 }

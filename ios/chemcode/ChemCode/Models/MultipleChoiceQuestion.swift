@@ -29,7 +29,7 @@ import SwiftUI
   
   struct Json: Codable {
     let id: String
-    let problem_set_id: String
+    let problemSetId: String
     let type: String
     let image: String?
     let text: String?
@@ -39,7 +39,7 @@ import SwiftUI
     static func from(_ mcq: MultipleChoiceQuestion) -> Json {
       Json(
         id: mcq.id,
-        problem_set_id: mcq.problemSetId,
+        problemSetId: mcq.problemSetId,
         type: mcq.type,
         image: "",
         text: mcq.text,
@@ -54,7 +54,7 @@ import SwiftUI
       
       return MultipleChoiceQuestion(
         id: self.id,
-        problemSetId: self.problem_set_id,
+        problemSetId: self.problemSetId,
         type: self.type,
         image: image,
         text: self.text,
