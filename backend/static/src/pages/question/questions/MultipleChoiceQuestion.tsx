@@ -26,7 +26,7 @@ export default function MultipleChoiceQuestionEditor({
   const [questionType, setQuestionType] = useState<"image" | "text">("image");
 
   function updateImage(data: string | null) {
-    handleChange({ ...question, image: data ?? undefined });
+    handleChange({ ...question, image: data });
   }
 
   function updateText(text: string) {
@@ -67,7 +67,7 @@ export default function MultipleChoiceQuestionEditor({
             <input
               placeholder="Question Prompt"
               type="text"
-              value={question.text}
+              value={question.text ?? ""}
               onChange={(e) => updateText(e.target.value)}
             />
           )}

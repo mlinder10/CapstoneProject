@@ -44,7 +44,6 @@ export default function QuestionPage({ handleClose, set }: QuestionPageProps) {
     setError(null);
     try {
       const res = await axios.get<Question[]>(`${SERVER}/questions/${set.id}`);
-      console.log(res.data);
       setQuestions(res.data);
     } catch (error) {
       console.error(error);

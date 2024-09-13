@@ -41,8 +41,8 @@ export type MultipleChoiceQuestion = {
   id: string;
   problemSetId: string;
   type: QuestionType;
-  image?: string;
-  text?: string;
+  image: string | null;
+  text: string | null;
   answer: string;
   choices: string[];
 };
@@ -54,8 +54,8 @@ export const defaultMultipleChoiceQuestion = (
     id: v4(),
     problemSetId: setId,
     type: "multiple_choice",
-    image: undefined,
-    text: undefined,
+    image: null,
+    text: null,
     answer: "",
     choices: [],
   };

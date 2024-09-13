@@ -58,8 +58,13 @@ class ProblemSet:
         return {'id': self.id, 'name': self.name, 'classroom_id': self.classroom_id}
 
 
-def fetch_questions(problem_set_id: str) -> t.List[t.Self]:
-    return MultipleChoiceQuestion.query(problem_set_id)
+def fetch_questions(problem_set_id: str) -> t.List:
+    questions = []
+    questions.extend(MultipleChoiceQuestion.query(problem_set_id))
+    questions.extend(MatchingQuestion.query(problem_set_id))
+    questions.extend(WordQuestion.query(problem_set_id))
+    questions.extend(FillBlankQuestion.query(problem_set_id))
+    return questions
 
 # Question Types
 
@@ -126,8 +131,8 @@ class WordQuestion:
         self.answers = answers
 
     @staticmethod
-    def new(problem_set_id: str, type: str, prompt: str, answers: t.List[str]) -> t.Self:
-        return WordQuestion(str(uuid.uuid4()), problem_set_id, type, prompt, answers)
+    def new(problem_set_id: str, prompt: str, answers: t.List[str]) -> t.Self:
+        return WordQuestion(str(uuid.uuid4()), problem_set_id, 'word', prompt, answers)
 
     @staticmethod
     def query(problem_set_id: str) -> t.List[t.Self]:

@@ -25,6 +25,12 @@ export default function MatchingQuestionEditor({
     handleChange({ ...question, relations: [...question.relations, ["", ""]] });
   }
 
+  function removeRelation() {
+    let newRelations = [...question.relations];
+    newRelations.pop();
+    handleChange({ ...question, relations: newRelations });
+  }
+
   function updateImage(data: string | null, atIndex: number) {
     const newRelations = [...question.relations];
     newRelations[atIndex][0] = data ?? "";
@@ -43,6 +49,7 @@ export default function MatchingQuestionEditor({
         {question.relations.map((relation, index) => (
           <div key={index} className={styles["relation-container"]}>
             <Base64ImageUploader
+              id={`image-${index}`}
               data={relation[0]}
               setData={(data) => updateImage(data, index)}
               width={128}
@@ -68,7 +75,7 @@ export default function MatchingQuestionEditor({
             <FaPlus />
             <span>Match</span>
           </button>
-          <button>
+          <button onClick={removeRelation}>
             <FaMinus />
             <span>Match</span>
           </button>

@@ -4,6 +4,7 @@ import Base64Image, { ImageType } from "./Base64Image";
 import { FaImage } from "react-icons/fa";
 
 type Base64ImageUploaderProps = {
+  id?: string;
   accept?: ImageType[];
   data: string | null;
   setData: (data: string | null) => void;
@@ -13,6 +14,7 @@ type Base64ImageUploaderProps = {
 
 export default function Base64ImageUploader({
   accept = ["png"],
+  id = "image",
   data,
   setData,
   width = 256,
@@ -39,17 +41,13 @@ export default function Base64ImageUploader({
   return (
     <div className={styles.container}>
       {!data && (
-        <label
-          htmlFor="image"
-          className={styles.label}
-          style={{ width, height }}
-        >
+        <label htmlFor={id} className={styles.label} style={{ width, height }}>
           Upload an Image
           <FaImage className={styles.icon} fontSize={(height / 3) * 2} />
         </label>
       )}
       <input
-        id="image"
+        id={id}
         type="file"
         accept={`.${accept.join(", .")}`}
         onChange={handleSelection}

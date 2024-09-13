@@ -11,12 +11,25 @@ class QuestionRoute(Resource):
             json_questions.append(question.json())
         return jsonify(json_questions)
 
-    def post(self, problem_set_id):
+
+class QuestionRouteWithType(Resource):
+    def post(self, problem_set_id, type):
         data = request.get_json()
         match type:
             case 'multiple_choice':
+                image = None
+                text = None
+                try:
+                    image = data['image']
+                except:
+                    pass
+                try:
+                    text = data['text']
+                except:
+                    pass
+
                 question = MultipleChoiceQuestion.new(
-                    problem_set_id, data['image'], data['text'], data['answer'], data['choices'])
+                    problem_set_id, image, text, data['answer'], data['choices'])
                 question.insert()
                 return jsonify(question.json())
             case 'matching':
