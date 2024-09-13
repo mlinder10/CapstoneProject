@@ -1,0 +1,40 @@
+GET http://127.0.0.1:5000/classrooms
+
+###
+
+POST  http://127.0.0.1:5000/classrooms
+Content-Type: application/json
+
+{
+  "name": "Matt's Class"
+}
+
+###
+
+GET http://127.0.0.1:5000/sets/e00b50ef-2f01-4d98-be6c-9800988d4b8c
+
+###
+
+POST http://127.0.0.1:5000/sets/e00b50ef-2f01-4d98-be6c-9800988d4b8c
+Content-Type: application/json
+
+{
+  "name": "Problem Set #1"
+}
+
+###
+
+GET http://127.0.0.1:5000/questions/562eb1f3-b6d0-4c94-8381-54661cf2893f
+
+###
+
+POST http://127.0.0.1:5000/questions/562eb1f3-b6d0-4c94-8381-54661cf2893f/multiple_choice
+Content-Type: application/json
+
+{
+  
+}
+
+###
+
+GET http://127.0.0.1:5000/professor

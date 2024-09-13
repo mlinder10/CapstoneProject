@@ -1,0 +1,53 @@
+.page {
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3rem;
+  height: 6rem;
+  background-color: #eee;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.toolbar-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  color: #07f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: calc(100vh - 6rem);
+  overflow-y: scroll;
+}
+
+.cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bbb;
+  margin-inline: 3rem;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.cell-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+}

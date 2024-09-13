@@ -1,0 +1,60 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-block: 1rem;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 5px #f7f7f7;
+}
+
+.upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.2rem;
+}
+
+.change-btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.discard {
+  border: none;
+  background-color: #bbb;
+  color: #f00;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-block: 0.5rem;
+  width: calc(100% - 2rem);
+  border-radius: 0.5rem;
+}
+.discard:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.save {
+  border: none;
+  background-color: #07f;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-block: 0.5rem;
+  width: calc(100% - 2rem);
+  border-radius: 0.5rem;
+}
+.save:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

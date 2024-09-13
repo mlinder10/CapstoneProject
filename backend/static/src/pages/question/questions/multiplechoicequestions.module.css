@@ -1,0 +1,66 @@
+.container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-block: 4rem;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.type-btns {
+  display: flex;
+  gap: 0.5rem;
+  width: 80%;
+}
+
+.type-btns button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  color: #07f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  background-color: #eee;
+  font-size: 0.8rem;
+  gap: 0.5rem;
+}
+
+.choice-btns {
+  display: flex;
+  gap: 0.5rem;
+  width: 80%;
+}
+
+.choice-btns button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  color: #07f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  background-color: #eee;
+  font-size: 0.8rem;
+  gap: 0.5rem;
+}
+.choice-btns button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

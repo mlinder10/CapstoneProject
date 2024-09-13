@@ -1,0 +1,43 @@
+.container {
+  position: fixed;
+  bottom: 4rem;
+  left: 100%;
+  transition: 0.3s ease-in-out;
+  translate: 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+.container.show {
+  translate: -100% 0;
+}
+
+.error {
+  background-color: #e00;
+  box-shadow: 0 0 5px inset #500;
+}
+
+.success {
+  background-color: #0e0;
+  box-shadow: 0 0 5px inset #050;
+}
+
+.info {
+  background-color: #0ee;
+  box-shadow: 0 0 5px inset #055;
+}
+
+.warning {
+  background-color: #ee0;
+  box-shadow: 0 0 5px inset #550;
+}
+
+.container button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+}

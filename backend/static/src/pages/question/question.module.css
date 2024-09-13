@@ -1,0 +1,58 @@
+.page {
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+}
+
+.header {
+  background-color: #eee;
+  padding-inline: 3rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.toolbar-btn {
+  border: none;
+  color: #07f;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  height: calc(100vh - 6rem);
+}
+
+.list {
+  background-color: #f7f7f7;
+  box-shadow: 0 0 5px #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.list-item {
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 5px #bbb;
+  cursor: pointer;
+}
+
+.list-item.selected {
+  background-color: #eee;
+}
+
+.question-container {
+  display: grid;
+  place-items: center;
+}
