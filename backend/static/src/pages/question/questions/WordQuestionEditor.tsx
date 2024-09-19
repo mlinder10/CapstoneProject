@@ -1,7 +1,7 @@
 import styles from "./wordquestioneditor.module.css";
 import { Question, QuestionType, WordQuestion } from "../../../types";
 import SettingsTab from "../../../components/SettingsTab";
-import { FaPlus } from "react-icons/fa";
+import { FaMinus, FaPlus } from "react-icons/fa";
 
 type WordQuestionEditorProps = {
   question: WordQuestion;
@@ -31,7 +31,17 @@ export default function WordQuestionEditor({
   }
 
   function addAnswer() {
+    // TODO: maybe add limit to accepted answers
     handleChange({ ...question, answers: [...question.answers, ""] });
+  }
+
+  function removeAnswer() {
+    if (question.answers.length === 1) {
+      return;
+    }
+    let answers = [...question.answers];
+    answers.pop();
+    handleChange({ ...question, answers });
   }
 
   return (
@@ -62,9 +72,18 @@ export default function WordQuestionEditor({
         handleSave={handleSave}
         handleDiscard={handleDiscard}
       >
-        <div>
-          <button onClick={addAnswer}>
+        <div className={styles["btn-container"]}>
+          {/* TODO: maybe add limit to accepted answers */}
+          <button className="settings-btn" onClick={addAnswer}>
             <FaPlus />
+            <span>Answer</span>
+          </button>
+          <button
+            className="settings-btn"
+            onClick={removeAnswer}
+            disabled={question.answers.length === 1}
+          >
+            <FaMinus />
             <span>Answer</span>
           </button>
         </div>

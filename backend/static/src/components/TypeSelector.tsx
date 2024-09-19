@@ -17,7 +17,7 @@ export default function TypeSelector({
       <option value="multiple_choice">Multiple Choice</option>
       <option value="matching">Matching</option>
       <option value="word">Word</option>
-      <option value="fill_blank">Fill in the Blank</option>
+      {/* <option value="fill_blank">Fill in the Blank</option> */}
     </select>
   );
 }

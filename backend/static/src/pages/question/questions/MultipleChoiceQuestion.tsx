@@ -100,21 +100,32 @@ export default function MultipleChoiceQuestionEditor({
         handleChangeType={handleChangeType}
       >
         <div className={styles["type-btns"]}>
-          <button onClick={setQuestionType.bind(null, "image")}>
+          <button
+            className="settings-btn"
+            onClick={setQuestionType.bind(null, "image")}
+          >
             <FaImage />
             <span>Image</span>
           </button>
-          <button onClick={setQuestionType.bind(null, "text")}>
+          <button
+            className="settings-btn"
+            onClick={setQuestionType.bind(null, "text")}
+          >
             <FaPencil />
             <span>Text</span>
           </button>
         </div>
         <div className={styles["choice-btns"]}>
-          <button onClick={addChoice} disabled={question.choices.length === 3}>
+          <button
+            className="settings-btn"
+            onClick={addChoice}
+            disabled={question.choices.length === 3}
+          >
             <FaPlus />
             <span>Choice</span>
           </button>
           <button
+            className="settings-btn"
             onClick={removeChoice}
             disabled={question.choices.length === 0}
           >

@@ -20,3 +20,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.btn-container {
+  display: flex;
+  width: 80%;
+  gap: 0.5rem;
+}

@@ -22,10 +22,16 @@ export default function MatchingQuestionEditor({
   handleDiscard,
 }: MatchingQuestionEditorProps) {
   function addRelation() {
+    if (question.relations.length === 5) {
+      return;
+    }
     handleChange({ ...question, relations: [...question.relations, ["", ""]] });
   }
 
   function removeRelation() {
+    if (question.relations.length === 1) {
+      return;
+    }
     let newRelations = [...question.relations];
     newRelations.pop();
     handleChange({ ...question, relations: newRelations });
@@ -70,14 +76,22 @@ export default function MatchingQuestionEditor({
         handleDiscard={handleDiscard}
         handleChangeType={handleChangeType}
       >
-        <div>
-          <button onClick={addRelation}>
+        <div className={styles["btn-container"]}>
+          <button
+            className="settings-btn"
+            onClick={addRelation}
+            disabled={question.relations.length === 5}
+          >
             <FaPlus />
-            <span>Match</span>
+            <span>Pair</span>
           </button>
-          <button onClick={removeRelation}>
+          <button
+            className="settings-btn"
+            onClick={removeRelation}
+            disabled={question.relations.length === 1}
+          >
             <FaMinus />
-            <span>Match</span>
+            <span>Pair</span>
           </button>
         </div>
       </SettingsTab>
