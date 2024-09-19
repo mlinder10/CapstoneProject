@@ -15,7 +15,7 @@ class Classroom:
         self.code = code
 
     @staticmethod
-    def new(name: str) -> t.Self:
+    def new(name: str) -> 'Classroom':
         return Classroom(str(uuid.uuid4()), name, Classroom.create_code())
 
     @staticmethod
@@ -23,7 +23,7 @@ class Classroom:
         return "".join(random.choices(CODE_CHARS, k=6))
 
     @staticmethod
-    def query() -> t.List[t.Self]:
+    def query() -> t.List['Classroom']:
         return map(lambda x: Classroom(x['id'], x['name'], x['code']), supabase.table('classrooms').select(
             '*').execute().data)
 
@@ -42,11 +42,11 @@ class ProblemSet:
         self.classroom_id = classroom_id
 
     @staticmethod
-    def new(name: str, classroom_id: str) -> t.Self:
+    def new(name: str, classroom_id: str) -> 'ProblemSet':
         return ProblemSet(str(uuid.uuid4()), name, classroom_id)
 
     @staticmethod
-    def query(classroom_id: str) -> t.List[t.Self]:
+    def query(classroom_id: str) -> t.List['ProblemSet']:
         return map(lambda x: ProblemSet(x['id'], x['name'], x['classroom_id']), supabase.table('problem_sets').select(
             '*').eq('classroom_id', classroom_id).execute().data)
 
@@ -80,11 +80,11 @@ class MultipleChoiceQuestion:
         self.type = 'multiple_choice'
 
     @staticmethod
-    def new(problem_set_id: str, image: str, text: str, answer: str, choices: t.List[str]) -> t.Self:
+    def new(problem_set_id: str, image: str, text: str, answer: str, choices: t.List[str]) -> 'MultipleChoiceQuestion':
         return MultipleChoiceQuestion(str(uuid.uuid4()), problem_set_id, image, text, answer, choices)
 
     @staticmethod
-    def query(problem_set_id: str) -> t.List[t.Self]:
+    def query(problem_set_id: str) -> t.List['MultipleChoiceQuestion']:
         return map(lambda x: MultipleChoiceQuestion(x['id'], x['problem_set_id'], x['image'], x['text'], x['answer'], json.loads(x['choices'])), supabase.table('mc_questions').select(
             '*').eq('problem_set_id', problem_set_id).execute().data)
 
@@ -105,11 +105,11 @@ class MatchingQuestion:
         self.relations = relations
 
     @staticmethod
-    def new(problem_set_id: str, type: str, relations: t.List[t.Tuple[str, str]]) -> t.Self:
+    def new(problem_set_id: str, type: str, relations: t.List[t.Tuple[str, str]]) -> 'MatchingQuestion':
         return MatchingQuestion(str(uuid.uuid4()), problem_set_id, type, relations)
 
     @staticmethod
-    def query(problem_set_id: str) -> t.List[t.Self]:
+    def query(problem_set_id: str) -> t.List['MatchingQuestion']:
         return map(lambda x: MatchingQuestion(x['id'], x['problem_set_id'], x['type'], json.loads(x['relations'])), supabase.table('matching_questions').select(
             '*').eq('problem_set_id', problem_set_id).execute().data)
 
@@ -131,11 +131,11 @@ class WordQuestion:
         self.answers = answers
 
     @staticmethod
-    def new(problem_set_id: str, prompt: str, answers: t.List[str]) -> t.Self:
+    def new(problem_set_id: str, prompt: str, answers: t.List[str]) -> 'WordQuestion':
         return WordQuestion(str(uuid.uuid4()), problem_set_id, 'word', prompt, answers)
 
     @staticmethod
-    def query(problem_set_id: str) -> t.List[t.Self]:
+    def query(problem_set_id: str) -> t.List['WordQuestion']:
         return map(lambda x: WordQuestion(x['id'], x['problem_set_id'], x['type'], x['prompt'], json.loads(x['answers'])), supabase.table('word_questions').select(
             '*').eq('problem_set_id', problem_set_id).execute().data)
 
@@ -158,11 +158,11 @@ class FillBlankQuestion:
         self.choices = choices
 
     @staticmethod
-    def new(problem_set_id: str, type: str, prompt: str, blank_indices: t.List[int], choices: t.List[str]) -> t.Self:
+    def new(problem_set_id: str, type: str, prompt: str, blank_indices: t.List[int], choices: t.List[str]) -> 'FillBlankQuestion':
         return FillBlankQuestion(str(uuid.uuid4()), problem_set_id, type, prompt, blank_indices, choices)
 
     @staticmethod
-    def query(problem_set_id: str) -> t.List[t.Self]:
+    def query(problem_set_id: str) -> t.List['FillBlankQuestion']:
         return map(lambda x: FillBlankQuestion(x['id'], x['problem_set_id'], x['type'], x['prompt'], json.loads(x['blank_indices']), json.loads(x['choices'])), supabase.table('fill_blank_questions').select(
             '*').eq('problem_set_id', problem_set_id).execute().data)
 

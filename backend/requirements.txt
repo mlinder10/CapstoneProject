@@ -5,3 +5,5 @@ supabase==2.7.4
 python-dotenv==1.0.1
 requests==2.32.3
 gunicorn==23.0.0
+tensorflow==2.15.0
+decimer==2.7.0

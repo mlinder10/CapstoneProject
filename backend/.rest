@@ -42,3 +42,12 @@ GET http://127.0.0.1:5000/professor
 ###
 
 GET https://capstoneproject-5z6p.onrender.com/professor
+
+###
+
+POST http://127.0.0.1:5000/draw
+Content-Type: application/json
+
+{
+  "image": ""
+}
