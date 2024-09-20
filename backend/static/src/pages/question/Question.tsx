@@ -37,7 +37,6 @@ export default function QuestionPage({ handleClose, set }: QuestionPageProps) {
   const [changes, setChanges] = useState<boolean>(false);
 
   async function fetchQuestions() {
-    if (questions.length !== 0) return;
     if (set === null) return;
 
     setLoading(true);
