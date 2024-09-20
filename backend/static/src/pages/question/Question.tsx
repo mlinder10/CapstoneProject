@@ -42,6 +42,7 @@ export default function QuestionPage({ handleClose, set }: QuestionPageProps) {
 
     setLoading(true);
     setError(null);
+    setQuestions([]);
     try {
       const res = await axios.get<Question[]>(`${SERVER}/questions/${set.id}`);
       setQuestions(res.data);
@@ -132,7 +133,7 @@ export default function QuestionPage({ handleClose, set }: QuestionPageProps) {
       <header className={styles.header}>
         <button onClick={handleClose} className={styles["toolbar-btn"]}>
           <FaChevronLeft />
-          <span>Back</span>
+          <span>{set.name}</span>
         </button>
         <p className={styles.title}>Question Editor</p>
         <button className={styles["toolbar-btn"]} onClick={handleCreate}>
