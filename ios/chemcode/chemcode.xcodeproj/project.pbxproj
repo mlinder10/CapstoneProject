@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140509332C9DE2050088FFEC /* MatchingQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1405092F2C9DE2050088FFEC /* MatchingQuestion.swift */; };
+		140509342C9DE2050088FFEC /* FillBlankQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140509312C9DE2050088FFEC /* FillBlankQuestion.swift */; };
+		140509352C9DE2050088FFEC /* WordQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140509322C9DE2050088FFEC /* WordQuestion.swift */; };
+		141677C62C9DE32F00FB01F7 /* MultipleChoiceQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140509302C9DE2050088FFEC /* MultipleChoiceQuestion.swift */; };
+		146210582C9DE1A100930C80 /* MatchingQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146210542C9DE1A100930C80 /* MatchingQuestionView.swift */; };
+		146210592C9DE1A100930C80 /* FillBlankQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146210552C9DE1A100930C80 /* FillBlankQuestionView.swift */; };
+		1462105A2C9DE1A100930C80 /* MultipleChoiceQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146210562C9DE1A100930C80 /* MultipleChoiceQuestionView.swift */; };
+		1462105B2C9DE1A100930C80 /* WordQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146210572C9DE1A100930C80 /* WordQuestionView.swift */; };
+		1462105D2C9DE1D300930C80 /* ResponseWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462105C2C9DE1D300930C80 /* ResponseWrapperView.swift */; };
 		14BB93242C93754F009F15EA /* ChemCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB93232C93754F009F15EA /* ChemCodeApp.swift */; };
 		14BB93262C93754F009F15EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB93252C93754F009F15EA /* ContentView.swift */; };
 		14BB93282C937551009F15EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BB93272C937551009F15EA /* Assets.xcassets */; };
@@ -14,15 +23,22 @@
 		14BB93332C937591009F15EA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB93322C937591009F15EA /* HttpClient.swift */; };
 		14BB93362C937874009F15EA /* Classroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB93352C937874009F15EA /* Classroom.swift */; };
 		14BB93382C937989009F15EA /* ProblemSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB93372C937989009F15EA /* ProblemSet.swift */; };
-		14BB933A2C9379F5009F15EA /* MultipleChoiceQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB93392C9379F5009F15EA /* MultipleChoiceQuestion.swift */; };
 		14BB933C2C937B9F009F15EA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB933B2C937B9F009F15EA /* Question.swift */; };
 		14DF87002C94A8BF00434F93 /* ClassroomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF86FF2C94A8BF00434F93 /* ClassroomsView.swift */; };
 		14DF87022C94AAEB00434F93 /* SetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF87012C94AAEB00434F93 /* SetsView.swift */; };
 		14DF87042C94ABE800434F93 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF87032C94ABE800434F93 /* QuestionsView.swift */; };
-		14DF87072C94B08F00434F93 /* MultipleChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF87062C94B08F00434F93 /* MultipleChoiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1405092F2C9DE2050088FFEC /* MatchingQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingQuestion.swift; sourceTree = "<group>"; };
+		140509302C9DE2050088FFEC /* MultipleChoiceQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestion.swift; sourceTree = "<group>"; };
+		140509312C9DE2050088FFEC /* FillBlankQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillBlankQuestion.swift; sourceTree = "<group>"; };
+		140509322C9DE2050088FFEC /* WordQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordQuestion.swift; sourceTree = "<group>"; };
+		146210542C9DE1A100930C80 /* MatchingQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingQuestionView.swift; sourceTree = "<group>"; };
+		146210552C9DE1A100930C80 /* FillBlankQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillBlankQuestionView.swift; sourceTree = "<group>"; };
+		146210562C9DE1A100930C80 /* MultipleChoiceQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestionView.swift; sourceTree = "<group>"; };
+		146210572C9DE1A100930C80 /* WordQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordQuestionView.swift; sourceTree = "<group>"; };
+		1462105C2C9DE1D300930C80 /* ResponseWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseWrapperView.swift; sourceTree = "<group>"; };
 		14BB93202C93754F009F15EA /* chemcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chemcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BB93232C93754F009F15EA /* ChemCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemCodeApp.swift; sourceTree = "<group>"; };
 		14BB93252C93754F009F15EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,12 +47,10 @@
 		14BB93322C937591009F15EA /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		14BB93352C937874009F15EA /* Classroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classroom.swift; sourceTree = "<group>"; };
 		14BB93372C937989009F15EA /* ProblemSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSet.swift; sourceTree = "<group>"; };
-		14BB93392C9379F5009F15EA /* MultipleChoiceQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestion.swift; sourceTree = "<group>"; };
 		14BB933B2C937B9F009F15EA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		14DF86FF2C94A8BF00434F93 /* ClassroomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomsView.swift; sourceTree = "<group>"; };
 		14DF87012C94AAEB00434F93 /* SetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsView.swift; sourceTree = "<group>"; };
 		14DF87032C94ABE800434F93 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
-		14DF87062C94B08F00434F93 /* MultipleChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +114,12 @@
 		14BB93342C937861009F15EA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				140509312C9DE2050088FFEC /* FillBlankQuestion.swift */,
+				1405092F2C9DE2050088FFEC /* MatchingQuestion.swift */,
+				140509302C9DE2050088FFEC /* MultipleChoiceQuestion.swift */,
+				140509322C9DE2050088FFEC /* WordQuestion.swift */,
 				14BB93352C937874009F15EA /* Classroom.swift */,
 				14BB93372C937989009F15EA /* ProblemSet.swift */,
-				14BB93392C9379F5009F15EA /* MultipleChoiceQuestion.swift */,
 				14BB933B2C937B9F009F15EA /* Question.swift */,
 			);
 			path = Models;
@@ -122,6 +139,7 @@
 		14DF86FE2C94A8A700434F93 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1462105C2C9DE1D300930C80 /* ResponseWrapperView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -129,7 +147,10 @@
 		14DF87052C94B08100434F93 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
-				14DF87062C94B08F00434F93 /* MultipleChoiceView.swift */,
+				146210552C9DE1A100930C80 /* FillBlankQuestionView.swift */,
+				146210542C9DE1A100930C80 /* MatchingQuestionView.swift */,
+				146210562C9DE1A100930C80 /* MultipleChoiceQuestionView.swift */,
+				146210572C9DE1A100930C80 /* WordQuestionView.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -204,17 +225,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141677C62C9DE32F00FB01F7 /* MultipleChoiceQuestion.swift in Sources */,
+				140509332C9DE2050088FFEC /* MatchingQuestion.swift in Sources */,
+				140509342C9DE2050088FFEC /* FillBlankQuestion.swift in Sources */,
+				140509352C9DE2050088FFEC /* WordQuestion.swift in Sources */,
+				1462105D2C9DE1D300930C80 /* ResponseWrapperView.swift in Sources */,
+				146210582C9DE1A100930C80 /* MatchingQuestionView.swift in Sources */,
+				146210592C9DE1A100930C80 /* FillBlankQuestionView.swift in Sources */,
+				1462105A2C9DE1A100930C80 /* MultipleChoiceQuestionView.swift in Sources */,
+				1462105B2C9DE1A100930C80 /* WordQuestionView.swift in Sources */,
 				14DF87002C94A8BF00434F93 /* ClassroomsView.swift in Sources */,
 				14BB93262C93754F009F15EA /* ContentView.swift in Sources */,
 				14BB93382C937989009F15EA /* ProblemSet.swift in Sources */,
 				14BB93362C937874009F15EA /* Classroom.swift in Sources */,
 				14BB93332C937591009F15EA /* HttpClient.swift in Sources */,
-				14BB933A2C9379F5009F15EA /* MultipleChoiceQuestion.swift in Sources */,
 				14DF87022C94AAEB00434F93 /* SetsView.swift in Sources */,
 				14BB933C2C937B9F009F15EA /* Question.swift in Sources */,
 				14DF87042C94ABE800434F93 /* QuestionsView.swift in Sources */,
 				14BB93242C93754F009F15EA /* ChemCodeApp.swift in Sources */,
-				14DF87072C94B08F00434F93 /* MultipleChoiceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

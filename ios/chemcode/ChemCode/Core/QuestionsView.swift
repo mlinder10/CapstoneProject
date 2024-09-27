@@ -9,17 +9,21 @@ import SwiftUI
 
 struct QuestionsView: View {
   @State private var questions = [Question]()
+  @State private var index = 0
   let pset: ProblemSet
   
   var body: some View {
     VStack {
-      if let question = questions.first {
+      if questions.count > index {
+        let question = questions[index]
         switch question {
-        case .multipleChoice(let mcq):
-          MultipleChoiceView(question: mcq)
+        case .multipleChoice(let q):
+          MultipleChoiceView(question: q) {
+            index += 1
+          }
         }
       } else {
-        Text("No Question")
+        Text("Loading questions")
       }
     }
     .padding()

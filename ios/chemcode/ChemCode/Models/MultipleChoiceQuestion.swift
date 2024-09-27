@@ -16,6 +16,11 @@ import SwiftUI
   let text: String?
   let answer: String
   let choices: [String]
+  var randomChoices: [String] {
+    var choices = [String]()
+    choices.append(answer)
+    return choices.shuffled()
+  }
   
   init(id: String, problemSetId: String, type: String, image: UIImage?, text: String?, answer: String, choices: [String]) {
     self.id = id
